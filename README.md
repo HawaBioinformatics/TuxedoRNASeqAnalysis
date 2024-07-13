@@ -3,7 +3,7 @@ A bulk-RNA pipeline using a reference genome to guide transcriptome assembly fro
 
 ## 1.	Quality control
 •	[FastQC](http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/) was used to evaluate the quality of the raw sample reads
-•	Adapter trimming (if necessary) using [Cutadapt](https://cutadapt.readthedocs.io/en/stable/) to remove all reads that have the adaptor on them and keep reads with no adaptor
+• [Cutadapt](https://cutadapt.readthedocs.io/en/stable/) 	Adapter trimming (if necessary) to remove all reads that have the adaptor on them and keep reads with no adaptor
 
 The new Tuxedo method for RNA-Seq, often referred to as Tuxedo 2, is an updated and improved version of the original Tuxedo pipeline. It incorporates several enhancements to increase accuracy, speed, and ease of use. 
 
