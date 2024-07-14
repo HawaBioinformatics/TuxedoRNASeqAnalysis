@@ -1,18 +1,21 @@
 # TuxedoRNASeqAnalysis
 
-A bulk-RNA pipeline using a reference genome to guide transcriptome assembly from RNA sequencing data and including differential expression analysis
+A bulk-RNA pipeline using a reference genome to guide transcriptome assembly from RNA sequencing data and including differential expression analysis.
 
 ## 1. Quality control
 
-• [FastQC](http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/) was used to evaluate the quality of the raw sample reads
+• [FastQC](http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/) was used to evaluate the quality of the raw sample reads.
+
 • [Cutadapt](https://cutadapt.readthedocs.io/en/stable/):
-Adapter trimming (if necessary) to remove all reads that have the adaptor on them and keep reads with no adaptor
+Adapter trimming (if necessary) to remove all reads that have the adaptor on them and keep reads with no adaptor.
 
 ## 2.  Read Alignment
 
 • [HISAT2](http://daehwankimlab.github.io/hisat2/manual/):
 Raw RNA-Seq reads are mapped to the reference genome using HISAT2. HISAT2's use of a hierarchical graph FM index allows it to handle complex read alignments quickly and efficiently.
+
 Requirements: [Reference genome index](http://daehwankimlab.github.io/hisat2/download/#h-sapiens)
+
 *Other Tools: STAR and Bowtie2*
 
 ## 3.  Transcript Assembly
