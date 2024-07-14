@@ -12,7 +12,7 @@ mkdir /Users/hawacoulibaly/Documents/GitHub/TuxedoRNASeqAnalysis/output/FastQC_r
 # the first path in this command indicates the fastq files used as input
 # the second path indicates the output directory created in the previous command
 
-fastqc /Users/hawacoulibaly/Downloads/FASTQfiles/FastQfiles/*.fastq -o /Users/hawacoulibaly/Documents/GitHub/TuxedoRNASeqAnalysis/output/FastQC_report/
+fastqc /Users/hawacoulibaly/Downloads/TestFiles/*.fastq -o /Users/hawacoulibaly/Documents/GitHub/TuxedoRNASeqAnalysis/output/FastQC_report/
 
 # remove unwanted/duplicated files (if necessary)
 rm *.zip
