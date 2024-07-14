@@ -5,18 +5,27 @@ A bulk-RNA pipeline using a reference genome to guide transcriptome assembly fro
 ## 1. Quality control
 
 • [FastQC](http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/) was used to evaluate the quality of the raw sample reads
+• [Cutadapt](https://cutadapt.readthedocs.io/en/stable/):
+Adapter trimming (if necessary) to remove all reads that have the adaptor on them and keep reads with no adaptor
 
-• [Cutadapt](https://cutadapt.readthedocs.io/en/stable/) Adapter trimming (if necessary) to remove all reads that have the adaptor on them and keep reads with no adaptor
+## 2.  Read Alignment
 
-2.  Read Alignment • [HISAT2](http://daehwankimlab.github.io/hisat2/manual/): Raw RNA-Seq reads are mapped to the reference genome using HISAT2. HISAT2's use of a hierarchical graph FM index allows it to handle complex read alignments quickly and efficiently.
+• [HISAT2](http://daehwankimlab.github.io/hisat2/manual/):
+Raw RNA-Seq reads are mapped to the reference genome using HISAT2. HISAT2's use of a hierarchical graph FM index allows it to handle complex read alignments quickly and efficiently.
+Requirements: [Reference genome index](http://daehwankimlab.github.io/hisat2/download/#h-sapiens)
+*Other Tools: STAR and Bowtie2*
 
-*Other Tools: HISAT2, STAR, Bowtie2*
+## 3.  Transcript Assembly
 
-3.  Transcript Assembly • [StringTie](https://ccb.jhu.edu/software/stringtie/index.shtml): The aligned reads from HISAT2 are assembled into transcripts using StringTie. StringTie accurately reconstructs the transcripts and quantifies their abundances using a novel network flow algorithm.
+• [StringTie](https://ccb.jhu.edu/software/stringtie/index.shtml):
+The aligned reads from HISAT2 are assembled into transcripts using StringTie. StringTie accurately reconstructs the transcripts and quantifies their abundances using a novel network flow algorithm.
 
 *Other Tools: Cufflinks*
 
-4.  Quantification • [SalmonCount](https://combine-lab.github.io/salmon/): If you don’t care about novel transcripts and have a reference genome, go straight to “FeatureCounts” which quantifies known transcripts using a reference genome, and the analysis generates a GTF annotation, while StringTie accounts for novel transcripts/genes if the known annotation is included. If you don’t include known annotation, only counts based on the regions your read data represents (transcripts/genes) will be generated – and that may be where the biggest differences are coming from.
+## 4.  Quantification
+
+• [SalmonCount](https://combine-lab.github.io/salmon/): 
+If you don’t care about novel transcripts and have a reference genome, go straight to “FeatureCounts” which quantifies known transcripts using a reference genome, and the analysis generates a GTF annotation, while StringTie accounts for novel transcripts/genes if the known annotation is included. If you don’t include known annotation, only counts based on the regions your read data represents (transcripts/genes) will be generated – and that may be where the biggest differences are coming from.
 
 *Other Tools: featureCount and StringTie*
 
