@@ -15,5 +15,7 @@ mkdir /Users/hawacoulibaly/Documents/GitHub/TuxedoRNASeqAnalysis/output/FastQC_r
 fastqc /Users/hawacoulibaly/Downloads/TestFiles/*.fastq -o /Users/hawacoulibaly/Documents/GitHub/TuxedoRNASeqAnalysis/output/FastQC_report/
 
 # remove unwanted/duplicated files (if necessary)
+cd /Users/hawacoulibaly/Documents/GitHub/TuxedoRNASeqAnalysis/output/FastQC_report
+
 rm *.zip
 
