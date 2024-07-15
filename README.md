@@ -27,8 +27,8 @@ The aligned reads from HISAT2 are assembled into transcripts using StringTie. St
 
 ## 4.  Quantification
 
-• [SalmonCount](https://combine-lab.github.io/salmon/): 
-If you don’t care about novel transcripts and have a reference genome, go straight to “FeatureCounts” which quantifies known transcripts using a reference genome, and the analysis generates a GTF annotation, while StringTie accounts for novel transcripts/genes if the known annotation is included. If you don’t include known annotation, only counts based on the regions your read data represents (transcripts/genes) will be generated – and that may be where the biggest differences are coming from.
+• [SalmonCount](https://combine-lab.github.io/salmon/):
+Salmon is a tool for quantifying transcript abundances from RNA-seq data. It is highly efficient and provides accurate quantification. “FeatureCounts” which quantifies known transcripts using a reference genome, and the analysis generates a GTF annotation, while StringTie accounts for novel transcripts/genes if the known annotation is included. If you don’t include known annotation, only counts based on the regions your read data represents (transcripts/genes) will be generated – and that may be where the biggest differences are coming from.
 
 *Other Tools: featureCount and StringTie*
 
@@ -39,3 +39,4 @@ If you don’t care about novel transcripts and have a reference genome, go stra
 *Other Tools: EdgeR and Ballgown*
 
 Scripts and workflow necessary to reproduce the BulkRNA-Seq analysis can be found in the [TuxedoRNASeqAnalysis/analysis](https://github.com/HawaBioinformatics/TuxedoRNASeqAnalysis/tree/main/analysis) sub-directory.
+
