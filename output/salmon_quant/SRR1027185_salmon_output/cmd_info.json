@@ -1,0 +1,10 @@
+{
+    "salmon_version": "1.10.3",
+    "index": "/Users/hawacoulibaly/Downloads/TestFiles/transcripts_index",
+    "libType": "A",
+    "mates1": "/Users/hawacoulibaly/Downloads/TestFiles/SRR1027185_1.fastq",
+    "mates2": "/Users/hawacoulibaly/Downloads/TestFiles/SRR1027185_2.fastq",
+    "threads": "8",
+    "output": "SRR1027185_salmon_output",
+    "auxDir": "aux_info"
+}
